@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="19px" viewBox="0 0 18 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>professional-tool-dropbox</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Group-5" transform="translate(-18.000000, -132.000000)" stroke="#7ED321" stroke-width="0.8">
+            <g id="Group-4" transform="translate(18.000000, 132.000000)">
+                <g id="professional-tool-dropbox" transform="translate(0.000000, 1.000000)">
+                    <polyline id="Path" points="13.9090909 12.952381 13.9090909 13.7619048 8.59090909 17 3.27272727 13.7619048 3.27272727 12.952381"></polyline>
+                    <polygon id="Path" points="3.68181818 5.66666667 0 8.5 5.31818182 12.1428571 9 8.9047619"></polygon>
+                    <polygon id="Path" points="9 2.83333333 3.68181818 6.07142857 0 3.23809524 5.31818182 0"></polygon>
+                    <polygon id="Path" points="14.3181818 5.66666667 18 8.5 12.6818182 12.1428571 9 8.9047619"></polygon>
+                    <polygon id="Path" points="9 2.83333333 14.3181818 6.07142857 18 3.23809524 12.6818182 0"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
