@@ -37,7 +37,12 @@
 										<h2 class="card-title">Your Hardware</h2>
 									</div>
 									<div>
-										<div id=""></div>
+											<div id="ip"></div>
+											<div id="device"></div>
+											<div id="browser"></div>
+											<div id="plugins"></div>
+											<div id="os"></div>
+											<div id="gpu"></div>
 									</div>
 									
 								</div>
@@ -51,7 +56,10 @@
 										<h2 class="card-title">Your Power Left</h2>
 									</div>
 									<div>
-										<div id="socialMedia"></div>
+										<div id="charging"></div>
+										<div id="level"></div>
+										<div id="dischargingTime"></div>
+											
 									</div>
 									
 								</div>
@@ -65,18 +73,42 @@
 										<h2 class="card-title">Your Location</h2>
 									</div>
 									<div>
-										<div id="socialMedia"></div>
+										<div id="location"></div>
 									</div>
 									
 								</div>
 						</div>
 				</section>
+				<section>
+						<div>
+								<div class="card">
+									<div class="card-header">
+										<img src="img/hardware.svg" class="card-title-image">
+										<h2 class="card-title">Your Location</h2>
+									</div>
+									<div>
+										<div id="speed"></div>
+										<div id="networkType"></div>
+									</div>
+									
+								</div>
+						</div>
+				</section>
+				
 			</div>
 		</div>
+		<canvas id="glcanvas" width="1" height="1"></canvas>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 		<script src="js/social.js"></script>
+		<script src="js/ip.js"></script>
+		<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+		<script src="js/ua-parser.js"></script>
+		<script src="js/device.js"></script>
+		<script src="js/speedtest.js"></script>
+		<script src="js/location.js"></script>
+		<script src="js/main.js"></script>
 
 		<script>
 			Reveal.initialize();
