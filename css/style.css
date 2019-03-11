@@ -53,6 +53,15 @@ section.present {
     right: 0;
 }
 
+#device, #gpu, #browser, #plugins, #os, #charging, #level, #dischargingTime, #location, #ip, #speed {
+    font-size: 0.6em;
+    text-align: left;
+}
+
+.map{
+    border-radius: 4px;
+}
+
 @media (max-width: 480px) {
      section.present{
          top: 0 !important;

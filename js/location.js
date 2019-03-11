@@ -18,7 +18,7 @@
         if (xhttp.readyState == 4 && xhttp.status == 200) {
             var geolocation = JSON.parse(xhttp.responseText).location;
             var loc = geolocation.lat + ',' + geolocation.lng;
-            el.innerHTML = '<a target="_blank" href="http://maps.google.com/maps/place/' + loc + '/@' + loc + ',10z/data=!3m1!1e3"><img src=https://maps.googleapis.com/maps/api/staticmap?zoom=10&size=700x400&maptype=roadmap&markers=color:red%7Clabel:C%7C' + loc + '&key=AIzaSyDWO8tV87DC4tCaHOLoADkL71G-jcyBdwk ></a><br><br>';
+            el.innerHTML = '<a target="_blank" href="http://maps.google.com/maps/place/' + loc + '/@' + loc + ',10z/data=!3m1!1e3"><img class="map" src=https://maps.googleapis.com/maps/api/staticmap?zoom=10&size=700x400&maptype=roadmap&markers=color:red%7Clabel:C%7C' + loc + '&key=AIzaSyDWO8tV87DC4tCaHOLoADkL71G-jcyBdwk ></a><br><br>';
             // el.innerHTML = '<a target="_blank" href="http://maps.google.com/maps?z=10&q=loc:' + geolocation.lat + ',' + geolocation.lng+'"><img src=https://maps.googleapis.com/maps/api/staticmap?zoom=10&size=700x400&maptype=roadmap&markers=color:red%7Clabel:C%7C' + geolocation.lat + ',' + geolocation.lng + '&key=AIzaSyBM0cQN_J2q4QjjzenttTarUZmvXlj4zl4 ></a><br><br>';
             el.innerHTML += '<b>Geo Coordinates:</b> ' + geolocation.lat + ', ' + geolocation.lng + '<br>';
 
