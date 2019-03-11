@@ -78,29 +78,3 @@
 
     }
     gpu.innerHTML += 'Display: ' + window.screen.width + ' x ' + window.screen.height + ' - ' + window.screen.colorDepth + 'bits/pixel';
-
-
-    /* Plugins */
-
-    function getPlugins() {
-        var a = '';
-        try {
-            for (var i = 0; i < navigator.plugins.length; i++) {
-                a += navigator.plugins[i].name + ': ' + navigator.plugins[i].description + '<br>'; //
-            }
-            if(navigator.plugins.length === 0){
-                a += "You aren't using any plugins"
-            }
-            return a;
-        } catch (e) {
-            return null;
-        }
-    }
-
-    var plugins = document.getElementById("plugins");
-    var pluginsString = getPlugins();
-    if (pluginsString !== '') {
-        plugins.innerHTML = pluginsString;
-    }
-
-}())
