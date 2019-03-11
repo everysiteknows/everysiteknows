@@ -55,7 +55,7 @@
         name: "Academia.edu"
     }, {
         url: "https://stackoverflow.com/users/login?ssrc=head&returnurl=http%3a%2f%2fstackoverflow.com%2ffavicon.ico",
-        name: "Stack Overflow"
+        name: "Stackoverflow"
     }];
 
 
