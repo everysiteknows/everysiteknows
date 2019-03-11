@@ -76,7 +76,7 @@
 
 
     function print(msg,color,social) {
-        document.getElementById('socialMedia').innerHTML += '<div class="social-container" style="color:'+color+';"><img class="social-icon" src="img/social/'+ social + '.svg"/><p>'+ msg + '</p></div>';
+        document.getElementById('socialMedia').innerHTML += '<div class="social-container" style="color:'+color+';"><img class="social-icon" src="img/social/'+ social.toLowerCase() + '.svg"/><p>'+ msg + '</p></div>';
     }
     networks.forEach(function(network) {
         var img = document.createElement('img');
