@@ -6,12 +6,14 @@
     if (parser.getDevice() && parser.getDevice().name) {
         el.innerHTML += '<b>Device:</b> ' + JSON.stringify(parser.getDevice()) + '<br>';
     }
-
+    if(navigator.platform === "iPhone"){
+        el.innerHTML += "📱 You have a fancy iPhone"
+    } else {
     el.innerHTML += '<b>CPU:</b><br> '+navigator.platform+', ';
     if (parser.getCPU() && parser.getCPU().name) {
         el.innerHTML += JSON.stringify(parser.getCPU()) + ' - ';
     }
-    el.innerHTML += (navigator.hardwareConcurrency ? navigator.hardwareConcurrency + ' Cores' : '');
+    el.innerHTML += (navigator.hardwareConcurrency ? navigator.hardwareConcurrency + ' Cores' : '');}
 
     console.log(parser.getOS().name)
     if(parser.getOS().name === "Android"){
