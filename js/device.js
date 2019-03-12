@@ -15,7 +15,6 @@
     }
     el.innerHTML += (navigator.hardwareConcurrency ? navigator.hardwareConcurrency + ' Cores' : '');}
 
-    console.log(parser.getOS().name)
     if(parser.getOS().name === "Android"){
         os.innerHTML = '<div class="os-info"> <img src="img/os/android.svg"/>' + parser.getOS().name + ' ' + parser.getOS().version + '</div>';
     }
