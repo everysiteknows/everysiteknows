@@ -62,6 +62,18 @@ section.present {
     border-radius: 4px;
 }
 
+.os-info {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.os-info img {
+    max-width: 48px;
+    margin-right: 1rem;
+}
+
 @media (max-width: 480px) {
      section.present{
          top: 0 !important;

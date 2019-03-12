@@ -13,8 +13,20 @@
     }
     el.innerHTML += (navigator.hardwareConcurrency ? navigator.hardwareConcurrency + ' Cores' : '');
 
-
-    os.innerHTML = parser.getOS().name + ' ' + parser.getOS().version + '<br>';
+    console.log(parser.getOS().name)
+    if(parser.getOS().name === "Android"){
+        os.innerHTML = '<div class="os-info"> <img src="img/os/android.svg"/>' + parser.getOS().name + ' ' + parser.getOS().version + '</div>';
+    }
+    else if(parser.getOS().name === "Mac OS"){
+        os.innerHTML = '<div class="os-info"> <img src="img/os/os-system-apple.svg"/>' + parser.getOS().name + ' ' + parser.getOS().version + '</div>';
+    }
+    else if(parser.getOS().name === "iOS"){
+        os.innerHTML = '<div class="os-info"> <img src="img/os/os-system-apple.svg"/>' + parser.getOS().name + ' ' + parser.getOS().version + '</div>';
+    }
+    else{
+        os.innerHTML = parser.getOS().name + ' ' + parser.getOS().version + '<br>';
+    }
+    
     browser.innerHTML += parser.getBrowser().name + ' ' + parser.getBrowser().version;
 
 
