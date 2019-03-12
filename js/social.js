@@ -6,9 +6,6 @@
         url: "https://www.instagram.com/accounts/login/?next=%2Ffavicon.ico",
         name: "Instagram"
     }, {
-        url: "https://twitter.com/login?redirect_after_login=%2Ffavicon.ico",
-        name: "Twitter"
-    }, {
         url: "https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Ffavicon.ico%3F_rdr%3Dp",
         name: "Facebook"
     }, {
@@ -18,7 +15,7 @@
         url: "https://login.skype.com/login?message=signin_continue&redirect_uri=https%3A%2F%2Fsecure.skype.com%2Ffavicon.ico",
         name: "Skype"
     }, {
-        url: "https://www.flickr.com/signin/yahoo/?redir=https%3A%2F%2Fwww.flickr.com/favicon.ico",
+        url: "https://identity.flickr.com/login?redir=https%3A%2F%2Fwww.flickr.com/favicon.ico",
         name: "Flickr"
     }, {
         url: "https://www.spotify.com/de/login/?forward_url=https%3A%2F%2Fwww.spotify.com%2Ffavicon.ico",
@@ -73,6 +70,12 @@
 //         url: "https://tablet.www.linkedin.com/splash?redirect_url=https%3A%2F%2Fwww.linkedin.com%2Ffavicon.ico%3Fgid%3D54384%26trk%3Dfulpro_grplogo",
 //         name: "Linkedin"
 //     }
+
+// Does not work because favicon is on CDN
+/* {
+    url: "https://twitter.com/login/error?redirect_after_login=%2Ffavicon.ico",
+    name: "Twitter"
+}, */
 
 
     function print(msg,color,social) {

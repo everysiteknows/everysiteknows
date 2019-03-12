@@ -77,3 +77,32 @@ section.present {
         transform: none !important;
      }
 }  
+
+
+@media (max-width: 420px) {
+    .main-title {
+        padding-top: 1.5rem;
+        font-size: 2.5em !important;
+    }
+
+    section.present{
+        top: 0 !important;
+    }
+
+    .slides{
+       width: 100% !important;
+       height: auto !important;
+       left:0 !important;
+       top:0 !important;
+       margin: 0 20px !important;
+       margin-top: 120px !important; 
+       transform: none !important;
+    }
+
+    .card{
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        font-size: 0.6em !important;
+        width: 85%;
+    }
+}  
