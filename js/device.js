@@ -18,6 +18,9 @@
     if(parser.getOS().name === "Android"){
         os.innerHTML = '<div class="os-info"> <img src="img/os/android.svg"/>' + parser.getOS().name + ' ' + parser.getOS().version + '</div>';
     }
+    else if (parser.getOS().name === "Windows"){
+        os.innerHTML = '<div class="os-info"> <img src="img/os/windows.svg"/>' + parser.getOS().name + ' ' + parser.getOS().version + '</div>';
+    }
     else if(parser.getOS().name === "Mac OS"){
         os.innerHTML = '<div class="os-info"> <img src="img/os/os-system-apple.svg"/>' + parser.getOS().name + ' ' + parser.getOS().version + '</div>';
     }
