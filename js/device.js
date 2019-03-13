@@ -47,8 +47,18 @@
         if(parser.getOS().name === "iOS"){
             document.querySelector('#charging').innerHTML += "<p>The browser can't get any battery data on your iPhone</p>"
         } else {
-        document.querySelector('#charging').innerHTML += 'Charging: ' + (battery.charging ? 'charging' : 'not charging');
-        document.querySelector('#level').textContent = 'Battery Level: ' + (Math.round(battery.level * 10000) / 100) + '%';
+            const batteryLevel = Math.round(battery.level * 10000) / 100
+            if(battery.charging){
+                {document.querySelector('.power-icon').innerHTML = '<img class="mr2" src="img/battery/charging-battery-charging.svg"/>'}
+            }
+            else if(batteryLevel < 10){document.querySelector('.power-icon').innerHTML = '<img class="mr2" src="img/battery/charging-battery-almost-full-1.svg"/>'}
+            else if(batteryLevel < 20){document.querySelector('.power-icon').innerHTML = '<img class="mr2" src="img/battery/charging-battery-low.svg"/>'}
+            else if(batteryLevel < 40){document.querySelector('.power-icon').innerHTML = '<img class="mr2" src="img/battery/charging-battery-medium-1.svg"/>'}
+            else if(batteryLevel < 60){document.querySelector('.power-icon').innerHTML = '<img class="mr2" src="img/battery/charging-battery-medium-1.svg"/>'}
+            else if(batteryLevel < 80){document.querySelector('.power-icon').innerHTML = '<img class="mr2" src="img/battery/charging-battery-almost-full-1.svg"/>'}
+            else {document.querySelector('.power-icon').innerHTML = '<img class="mr2" src="img/battery/charging-battery-full-1.svg"/>'}
+            document.querySelector('#charging').innerHTML += 'Charging: ' + (battery.charging ? 'charging' : 'not charging');
+            document.querySelector('#level').textContent = 'Battery Level: ' + (Math.round(battery.level * 10000) / 100) + '%';
             if (!battery.charging) {
                 document.querySelector('#dischargingTime').textContent = 'Time remaining: ' + (battery.dischargingTime === Infinity ? 'Infinity' : (Math.round(100 * battery.dischargingTime / 3600) / 100) + 'h');
             } else {

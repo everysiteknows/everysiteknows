@@ -88,6 +88,19 @@ section.present {
     background: blue;
 }
 
+#power {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.power-icon img{
+    height: 60%;
+    min-height: 64px;
+}
+
+
 @media (max-width: 480px) {
      section.present{
          top: 0 !important;
