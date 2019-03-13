@@ -100,6 +100,10 @@ section.present {
     min-height: 64px;
 }
 
+p.smaller {
+    font-size: 0.8em !important;
+}
+
 
 @media (max-width: 480px) {
      section.present{
