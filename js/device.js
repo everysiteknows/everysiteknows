@@ -16,33 +16,44 @@
     el.innerHTML += (navigator.hardwareConcurrency ? navigator.hardwareConcurrency + ' Cores' : '');}
 
     if(parser.getOS().name === "Android"){
-        os.innerHTML = '<div class="os-info"> <img src="img/os/android.svg"/>' + parser.getOS().name + ' ' + parser.getOS().version + '</div>';
+        os.innerHTML = '<div class="os-info"> <img src="img/os/android.svg"/>' + parser.getOS().name + ' <span class="label">version: ' + parser.getOS().version + '</span></div>';
     }
     else if (parser.getOS().name === "Windows"){
-        os.innerHTML = '<div class="os-info"> <img src="img/os/windows.svg"/>' + parser.getOS().name + ' ' + parser.getOS().version + '</div>';
+        os.innerHTML = '<div class="os-info"> <img src="img/os/windows.svg"/>' + parser.getOS().name + ' <span class="label">version: ' + parser.getOS().version + '</span></div>';
     }
     else if(parser.getOS().name === "Mac OS"){
-        os.innerHTML = '<div class="os-info"> <img src="img/os/os-system-apple.svg"/>' + parser.getOS().name + ' ' + parser.getOS().version + '</div>';
+        os.innerHTML = '<div class="os-info"> <img src="img/os/os-system-apple.svg"/>' + parser.getOS().name + '<span class="label">version: ' + parser.getOS().version + '</span></div>';
     }
     else if(parser.getOS().name === "iOS"){
-        os.innerHTML = '<div class="os-info"> <img src="img/os/os-system-apple.svg"/>' + parser.getOS().name + ' ' + parser.getOS().version + '</div>';
+        os.innerHTML = '<div class="os-info"> <img src="img/os/os-system-apple.svg"/>' + parser.getOS().name + ' <span class="label">version: ' + parser.getOS().version + '</span></div>';
     }
     else{
         os.innerHTML = parser.getOS().name + ' ' + parser.getOS().version + '<br>';
     }
     
-    browser.innerHTML += parser.getBrowser().name + ' ' + parser.getBrowser().version;
+    if(parser.getBrowser().name == "Chrome"){
+        browser.innerHTML += "<div class='browser-container'><img src='img/browser/chrome.png'/> Chrome  <span class='label'>version: " + parser.getBrowser().version + "</span></div>"
+    } else if(parser.getBrowser().name == "Safari"){
+        browser.innerHTML += "<div class='browser-container'><img src='img/browser/safari.png'/> Safari  <span class='label'>version: " + parser.getBrowser().version + "</span></div>"
+    }  else if(parser.getBrowser().name == "Firefox"){
+        browser.innerHTML += "<div class='browser-container'><img src='img/browser/firefox.png'/> Firefox  <span class='label'>version: " + parser.getBrowser().version + "</span></div>"
+    }  
+    else { browser.innerHTML += parser.getBrowser().name + ' ' + parser.getBrowser().version;}
 
 
 
     function updateBatteryStatus(battery) {
         document.querySelector('#charging').innerHTML = '<b>Battery</b><br>';
+        if(parser.getOS().name === "iOS"){
+            document.querySelector('#charging').innerHTML += "<p>The browser can't get any battery data on your iPhone</p>"
+        } else {
         document.querySelector('#charging').innerHTML += 'Charging: ' + (battery.charging ? 'charging' : 'not charging');
         document.querySelector('#level').textContent = 'Battery Level: ' + (Math.round(battery.level * 10000) / 100) + '%';
-        if (!battery.charging) {
-            document.querySelector('#dischargingTime').textContent = 'Time remaining: ' + (battery.dischargingTime === Infinity ? 'Infinity' : (Math.round(100 * battery.dischargingTime / 3600) / 100) + 'h');
-        } else {
-            document.querySelector('#dischargingTime').textContent = 'Charging Time: ' + (battery.chargingTime === Infinity ? 'Infinity' : (Math.round(100 * battery.chargingTime / 3600) / 100) + 'h');
+            if (!battery.charging) {
+                document.querySelector('#dischargingTime').textContent = 'Time remaining: ' + (battery.dischargingTime === Infinity ? 'Infinity' : (Math.round(100 * battery.dischargingTime / 3600) / 100) + 'h');
+            } else {
+                document.querySelector('#dischargingTime').textContent = 'Charging Time: ' + (battery.chargingTime === Infinity ? 'Infinity' : (Math.round(100 * battery.chargingTime / 3600) / 100) + 'h');
+            }
         }
     }
 

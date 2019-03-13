@@ -62,7 +62,7 @@ section.present {
     border-radius: 4px;
 }
 
-.os-info {
+.browser-container, .os-info {
     display: flex;
     align-items: center;
     margin: 0;
@@ -72,6 +72,20 @@ section.present {
 .os-info img {
     max-width: 48px;
     margin-right: 1rem;
+}
+
+
+.browser-container img {
+    max-width: 48px;
+    margin-right: 1rem;
+}
+
+.label {
+    border-radius: 4px;
+    padding: 0.5rem !important;
+    font-size: 0.4em !important;
+    margin-left: 0.6rem !important;
+    background: blue;
 }
 
 @media (max-width: 480px) {
